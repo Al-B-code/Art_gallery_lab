@@ -59,6 +59,11 @@ public class GalleryTest {
         gallery.addStock(artwork3);
         assertThat(gallery.countStock()).isEqualTo(3);
     }
+    @Test
+    public void removeStock(){
+        gallery.removeStock(artwork);
+        assertThat(gallery.countStock()).isEqualTo(1);
+    }
 
 
 

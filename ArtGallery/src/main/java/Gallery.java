@@ -35,6 +35,12 @@ public class Gallery {
     public void addStock(Artwork stock) {
         this.stock.add(stock);
     }
+
+    public void removeStock(Artwork stock){
+        this.stock.remove(stock);
+    }
+
+
     public int countStock(){
         return this.stock.size();
     }
