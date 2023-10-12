@@ -15,7 +15,7 @@ public class ArtworkTest {
 
 
         artist = new Artist("Leonardo Da Vinci");
-        artwork = new Artwork("Mona Lisa", artist.getName(), 50);
+        artwork = new Artwork("Mona Lisa", artist, 50);
 
     }
 
@@ -30,16 +30,15 @@ public class ArtworkTest {
         assertThat(artwork.getTitle()).isEqualTo("Starry Night");
     }
 
-
-
-
     @Test
     public void getArtist(){
-        assertThat(artwork.getArtist()).isEqualTo("Leonardo Da Vinci");
+        assertThat(artwork.getArtist()).isEqualTo(artist);
     }
 
     public void setArtist() {
-        artwork.setArtist("Nathan");
-        assertThat(artwork.getArtist()).isEqualTo("Nathan");
+        Artist artist1 = new Artist("Vincent Van Gogh");
+
+        artwork.setArtist(artist1);
+        assertThat(artwork.getArtist()).isEqualTo("Vincent Van Gogh");
         }
             }
