@@ -71,6 +71,11 @@ public class GalleryTest {
         assertThat(gallery.getTill()).isEqualTo(1050);
     }
 
+    @Test
+    public void stockTake(){
+        assertThat(gallery.stockTake()).isEqualTo(150);
+    }
+
 
 
 }

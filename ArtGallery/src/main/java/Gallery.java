@@ -48,4 +48,13 @@ public class Gallery {
     public int countStock(){
         return this.stock.size();
     }
+
+    public double stockTake(){
+        double stockTake = 0;
+        for (int i = 0; i < this.stock.size() ; i++) {
+            stockTake += this.getStock().get(i).getPrice();
+        }
+        return stockTake;
+    }
+
 }
