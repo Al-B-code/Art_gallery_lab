@@ -34,11 +34,11 @@ public class ArtworkTest {
     public void getArtist(){
         assertThat(artwork.getArtist()).isEqualTo(artist);
     }
-
+    @Test
     public void setArtist() {
         Artist artist1 = new Artist("Vincent Van Gogh");
 
         artwork.setArtist(artist1);
-        assertThat(artwork.getArtist()).isEqualTo("Vincent Van Gogh");
+        assertThat(artwork.getArtist().getName()).isEqualTo("Vincent Van Gogh");
         }
             }
