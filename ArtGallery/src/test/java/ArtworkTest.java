@@ -12,11 +12,8 @@ public class ArtworkTest {
 
     @BeforeEach
     public void setUp(){
-
-
         artist = new Artist("Leonardo Da Vinci");
         artwork = new Artwork("Mona Lisa", artist, 50);
-
     }
 
     @Test
