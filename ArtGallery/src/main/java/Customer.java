@@ -36,9 +36,13 @@ public class Customer {
         gallery.removeStock(artwork);
     }
 
-        public void buyArtwork(Gallery gallery, Artwork artwork){
+
+
+    public void buyArtwork(Gallery gallery, Artwork artwork){
         if (this.wallet - artwork.getPrice() > 0){
             this.addArtworkToCollection(gallery, artwork);
+            this.wallet -= artwork.getPrice();
+            gallery.addMoneyToTill(artwork);
         }
     }
 
@@ -49,6 +53,8 @@ public class Customer {
     public ArrayList getArtworkCollection() {
         return this.artworkCollection;
     }
+
+
 
 
 }

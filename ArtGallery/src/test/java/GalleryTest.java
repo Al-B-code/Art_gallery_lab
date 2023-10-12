@@ -65,6 +65,11 @@ public class GalleryTest {
         assertThat(gallery.countStock()).isEqualTo(1);
     }
 
+    @Test
+    public void addMoneyToTill(){
+        gallery.addMoneyToTill(artwork);
+        assertThat(gallery.getTill()).isEqualTo(1050);
+    }
 
 
 

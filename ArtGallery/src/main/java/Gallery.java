@@ -28,6 +28,10 @@ public class Gallery {
         this.till = till;
     }
 
+    public void addMoneyToTill(Artwork artwork){
+        this.till += artwork.getPrice();
+    }
+
     public ArrayList<Artwork> getStock() {
         return this.stock;
     }

@@ -81,6 +81,8 @@ public class CustomerTest {
         customer.buyArtwork(gallery, artwork);
         assertThat(customer.countArtworkCollection()).isEqualTo(1);
         assertThat(gallery.countStock()).isEqualTo(1);
+        assertThat(customer.getWallet()).isEqualTo(50);
+        assertThat(gallery.getTill()).isEqualTo(1050);
 
     }
 
