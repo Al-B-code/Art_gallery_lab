@@ -37,8 +37,24 @@ public class ArtworkTest {
     @Test
     public void setArtist() {
         Artist artist1 = new Artist("Vincent Van Gogh");
-
         artwork.setArtist(artist1);
         assertThat(artwork.getArtist().getName()).isEqualTo("Vincent Van Gogh");
-        }
-            }
+    }
+
+    @Test
+    public void getPrice(){
+        assertThat(artwork.getPrice()).isEqualTo(50);
+    }
+
+    @Test
+    public void setPrice(){
+        artwork.setPrice(100);
+        assertThat(artwork.getPrice()).isEqualTo(100);
+    }
+
+
+
+
+//
+}
+
