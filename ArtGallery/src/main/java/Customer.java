@@ -32,13 +32,14 @@ public class Customer {
 
 
     public void addArtworkToCollection(Gallery gallery, Artwork artwork){
-        this.artworkCollection.add(gallery.getStock().clone());
+        this.artworkCollection.add(artwork);
+        gallery.removeStock(artwork);
+    }
 
-
-        System.out.println(this.artworkCollection.contains(artwork));
-
-        //gallery.removeStock(artwork);
-
+        public void buyArtwork(Gallery gallery, Artwork artwork){
+        if (this.wallet - artwork.getPrice() > 0){
+            this.addArtworkToCollection(gallery, artwork);
+        }
     }
 
     public int countArtworkCollection(){
@@ -49,13 +50,5 @@ public class Customer {
         return this.artworkCollection;
     }
 
-    public void setArtworkCollection(ArrayList artworkCollection) {
-        this.artworkCollection = artworkCollection;
-    }
 
-    //    public void buyArtwork(Gallery gallery, Artwork artwork){
-//        if (this.wallet - artwork.getPrice() > 0){
-//
-//        }
-//    }
 }
