@@ -2,6 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatExceptionOfType;
 
 public class CustomerTest {
 
@@ -12,6 +13,7 @@ public class CustomerTest {
     @BeforeEach
     public void setUp() {
         customer = new Customer("John");
+
     }
 
 
@@ -39,6 +41,23 @@ public class CustomerTest {
         customer.setWallet(50);
         assertThat(customer.getWallet()).isEqualTo(50);
     }
+
+    @Test
+    public  void countArtworkCollection(){
+        assertThat(customer.countArtworkCollection()).isEqualTo(0);
+    }
+
+    @Test
+    public void getArtworkCollection(){
+        assertThat(customer.getArtworkCollection().size()).isEqualTo(customer.countArtworkCollection());
+    }
+
+
+//    @Test
+//    public void addArtworkToCollection(){
+//
+//
+//    }
 }
 
 
